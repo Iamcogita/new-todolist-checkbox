@@ -1,0 +1,21 @@
+body{
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(0,0,0,0.8);
+    background-color: rgb(200, 210, 200);
+    width: 600px;
+    height: 300px;
+}
+h1{
+    padding-top: 20px;
+    text-indent: 20px;
+    font-size: large;
+}
+.taskDiv{
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 10px;
+}
+button{
+    margin-left: 10px;
+}
