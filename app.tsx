@@ -68,9 +68,6 @@ const App = () => {
     )
 };
 
-
 const rootNode = document.getElementById("reactDiv");
-if (rootNode) {
-    const root = ReactDOM.createRoot(rootNode)
-    root.render(<App />);
-}
+const root = ReactDOM.createRoot(rootNode);
+root.render(<App />);
