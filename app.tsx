@@ -29,11 +29,7 @@ const TodoTask: FC<{ name: string }> = ({name}) =>{
     )
 } 
 
-interface ToDoFormProps {
-    onSubmit: FormEventHandler<HTMLFormElement>
-}
-
-const ToDoForm: FC<ToDoFormProps> = ({ onSubmit }) => {
+const ToDoForm: FC<{onSubmit:FormEventHandler<HTMLFormElement>}> = ({ onSubmit }) => {
     return (
         <form onSubmit={onSubmit}>
             <input type="text" placeholder="your task" name="taskName"></input>
