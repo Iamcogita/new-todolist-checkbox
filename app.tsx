@@ -15,8 +15,7 @@ const ToDoList: FC<{ taskList: string[] }> = ({ taskList }) => {
     )
 }
 
-function TodoTask(props: { name: string }) {
-    const { name } = props;
+const TodoTask: FC<{ name: string }> = ({name}) =>{
     const [isDone, setIsDone] = useState(false);
     function setDone() {
         setIsDone(!isDone);
@@ -28,7 +27,7 @@ function TodoTask(props: { name: string }) {
             </input>
         </>
     )
-}
+} 
 
 interface ToDoFormProps {
     onSubmit: FormEventHandler<HTMLFormElement>
@@ -50,7 +49,7 @@ const App = () => {
         event.preventDefault();
         const form = event.currentTarget;
         const formData = new FormData(form);
-        const newTask = formData.get('taskName');
+        const newTask = formData.get("taskName");
         if(newTask === ""){alert("task shouldn't be empty!")}
         else if (typeof newTask === "string") {
             setTasks([...tasks, newTask]);
@@ -60,7 +59,7 @@ const App = () => {
 
     return (
         <>
-            <div className='taskDiv'>
+            <div className="taskDiv">
                 <h1>To Do:</h1>
                 <ToDoForm onSubmit={handleSubmit} />
                 <ToDoList taskList={tasks} />
